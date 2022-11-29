@@ -14,12 +14,21 @@ def ispalindrom(number: int) -> int:
 # "the-stealth-warrior" -> "theStealthWarrior"
 # "The_Stealth_Warrior" -> "TheStealthWarrior"
 
-def convert_camelcase(text: str) -> str:
+from functools import reduce
+
+
+
+def convert(text: str) -> str:
     if len(text.split("-")) > 1:
-        elements = [text.split('-')[0].lower(), text.split('-')[1].capitalize(), text.split('-')[2].capitalize()]
-        return "".join(elements)
-    else:
-        return "".join(text.split('_'))
+        result = reduce(lambda x, y: x + y.capitalize(), text.replace("_", "-").split("-"))
+        return result
+    elif len(text.split("_")):
+        result = reduce(lambda x, y: x + y.capitalize(), text.replace("-", "_").split("_"))
+        return result
+
+
+
+
 
 
 
