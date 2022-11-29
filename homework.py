@@ -10,6 +10,19 @@ def ispalindrom(number: int) -> int:
             return el
 
 
+# 1. Написать функцию, которая будет конвертировать любую переданную ей строку в CamelCase.
+# "the-stealth-warrior" -> "theStealthWarrior"
+# "The_Stealth_Warrior" -> "TheStealthWarrior"
+
+def convert_camelcase(text: str) -> str:
+    if len(text.split("-")) > 1:
+        elements = [text.split('-')[0].lower(), text.split('-')[1].capitalize(), text.split('-')[2].capitalize()]
+        return "".join(elements)
+    else:
+        return "".join(text.split('_'))
+
+
+
 
 
 
