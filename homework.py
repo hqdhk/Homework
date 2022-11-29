@@ -27,6 +27,22 @@ def convert(text: str) -> str:
         return result
 
 
+# "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+# "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+
+def sort_by_num(text: str) -> str:
+    result = []
+    numbers = list(map(str, list(range(1, len(text.split())+1))))
+    for num in numbers:
+        for word in text.split():
+            if num in word:
+                result.append(word)
+                break
+
+    return " ".join(result)
+
+print(sort_by_num("4of Fo1r pe6ople g3ood th5e the2"))
+
 
 
 
