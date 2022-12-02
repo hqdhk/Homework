@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62f3e223-e054-4b32-a047-9d7b26ab0d6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
